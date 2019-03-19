@@ -1,0 +1,15 @@
+rule "Test rule"
+when
+    Thing "tinkerforge:lcd128x64:09797a8d:H8Z" changed to ONLINE
+then
+   val actions = getActions("tinkerforge", "tinkerforge:lcd128x64:09797a8d:H8Z")
+    if(null === actions) {
+            logInfo("actions", "Actions not found, check thing ID")
+            return
+     }
+     logInfo("actions", " " + actions)
+     actions.setGUIButton(0, 0, 0, 60, 20, "button0")
+     actions.setGUISlider(0, 30, 30, 50, 0, 0)
+     
+end
+
