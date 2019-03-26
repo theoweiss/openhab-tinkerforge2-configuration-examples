@@ -1,6 +1,63 @@
 # openhab-tinkerforge2-configuration-examples
 
-## org.openhab.binding.tinkerforge-2.5.0-11-SNAPSHOT
+## Unterstützte Bricklets
+
+* Temperature
+* TemperatureV2
+* TemperatureIR
+* TemperatureIRV2
+* LoadCell
+* LoadCellV2
+* SoundIntensity
+* SoundPressureLevel
+* AmbientLight
+* AmbientLightV2
+* AmbientLightV3
+* IndustrialDualAnalogIn
+* IndustrialDualAnalogInV2
+* PTC
+* PTCV2
+* Barometer
+* BarometerV2
+* DistanceIR
+* DistanceIRV2
+* UVLight
+* UVLightV2
+* Humidity
+* HumidityV2
+* MotionDetector
+* MotionDetectorV2
+* AirQuality
+* RealTimeClock
+* RealTimeClockV2
+* RotaryEncoder
+* MultiTouch
+* VoltageCurrent
+* VoltageCurrentV2
+* DistanceUS
+* DualRelay
+* IndustrialDualRelay
+* IndustrialQuadRelayV2
+* IndustrialQuadRelay
+* SolidStateRelay
+* SolidStateRelayV2
+* NFCRFID
+* NFC (in Arbeit, funktioniert noch nicht!)
+* IO16
+* IO4
+* IO16V2
+* IO4V2
+* LCD128x64
+* LCD20x4 (in Arbeit, funktioniert noch nicht!)
+* OutdoorWeather (in Arbeit, funktioniert noch nicht!)
+
+Damit kann man die aktuelle Liste aus dem codegen.json erzeugen:
+
+```bash
+grep '"bricklet":' codegen.json |awk '{print "* " $2}' | sed -e 's/"Bricklet//' | sed -e 's/",$//'
+```
+
+## 2.5.0-11-SNAPSHOT
 
 __Ab org.openhab.binding.tinkerforge-2.5.0-11-SNAPSHOT wird eine openHAB-2.5-Snapshot Installation benötigt__.
 
