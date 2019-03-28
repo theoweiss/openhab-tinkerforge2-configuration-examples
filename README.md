@@ -47,8 +47,11 @@
 * IO4
 * IO16V2
 * IO4V2
+* LCD20x4
 * LCD128x64
-* LCD20x4 (in Arbeit, funktioniert noch nicht!)
+* OLED128x64
+* OLED128x64V2
+* OLED64x48
 * OutdoorWeather (in Arbeit, funktioniert noch nicht!)
 
 Damit kann man die aktuelle Liste aus dem codegen.json erzeugen:
@@ -56,6 +59,15 @@ Damit kann man die aktuelle Liste aus dem codegen.json erzeugen:
 ```bash
 grep '"bricklet":' codegen.json |awk '{print "* " $2}' | sed -e 's/"Bricklet//' | sed -e 's/",$//'
 ```
+
+## 2.5.0-12-SNAPSHOT
+
+### Neue Bricklets
+
+* LCD20x4
+* OLED128x64
+* OLED128x64V2
+* OLED64x48
 
 ## 2.5.0-11-SNAPSHOT
 
