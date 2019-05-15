@@ -1,0 +1,7 @@
+rule "Test rule"
+when
+    Thing "tinkerforge:lcd20x4:206bfa4b:d4j:display" changed to ONLINE
+then
+     tinkerforge:lcd20x4:206bfa4b:d4j:display
+end
+
